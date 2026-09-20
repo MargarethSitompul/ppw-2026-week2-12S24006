@@ -1,68 +1,120 @@
-# Portofolio Web — ppw-2026-week2-12S24006
+# Portofolio mrgrt
 
-Halaman web portofolio profil profesional tunggal (*single page showcase webpage*) yang dibuat untuk memenuhi Tugas Mandiri Mahasiswa (Individual Assignment) minggu ke-2 mata kuliah Pemrograman Web.
+Halaman web portofolio tunggal (single page) untuk tugas mandiri **Pengembangan Halaman Web Portofolio & Layanan Interaktif Accessible Berbasis HTML5 dan Modern CSS** (PPW minggu ke-2).
 
-**Judul Tugas:** Pengembangan Halaman Web Portofolio & Layanan Interaktif *Accessible* Berbasis HTML5 dan Modern CSS
+Struktur bagian halaman (Tentang Saya, Keahlian, Portofolio Karya, Formulir Layanan) mengikuti pola portofolio pengembang pada repositori acuan [rchll-16/my-portfolio](https://github.com/rchll-16/my-portfolio), tetapi dibuat dengan HTML5 dan CSS murni sesuai aturan modul.
+
+**Demo langsung:** `https://USERNAME.github.io/ppw-2026-week2-12S24006/`
+
+---
 
 ## Identitas
 
 | Keterangan | Isi |
-|---|---|
-| Nama | (ganti dengan nama lengkap Anda)* |
+| --- | --- |
+| Nama panggilan | mrgrt |
 | NIM | 12S24006 |
-| Program Studi | Sistem Informasi (Computer Information Systems) |
-| Institusi | Institut Teknologi Del |
+| Program studi | Sistem Informasi (Computer Information Systems) |
+| Kampus | Institut Teknologi Del, Balige |
 
-## Demo Live
+---
 
-Situs ini dipublikasikan melalui GitHub Pages di:
-`https://<username-github-anda>.github.io/ppw-2026-week2-12S24006/`
+## Teknologi
 
-*(Tautan aktif setelah repositori dipublikasikan — lihat panduan deployment di bawah.)*
+- HTML5 semantik (tanpa `<div>`)
+- CSS3 modern: custom properties, Grid, Flexbox, `:user-invalid`, `prefers-color-scheme`
+- Tanpa JavaScript dan tanpa framework
 
-## Struktur Berkas
+---
+
+## Struktur berkas
 
 ```
 ppw-2026-week2-12S24006/
-├── index.html      # Struktur & konten halaman
-├── style.css       # Seluruh styling (CSS eksternal)
-└── README.md        # Dokumen ini
+├── index.html    # Halaman utama
+├── style.css     # CSS eksternal
+├── README.md     # Dokumentasi ini
+└── LICENSE       # Lisensi MIT
 ```
 
-## Ringkasan Fitur & Pemenuhan Kriteria
+---
 
-**1. Struktur Semantik HTML5**
-Halaman menggunakan `<header>` (logo & navigasi), `<nav>`, `<main>` dengan tiga `<section>` (`#tentang`, `#portofolio`, `#layanan`), `<aside>` (kartu "Sekilas Fakta"), dan `<footer>`. Elemen `<div>` hanya dipakai sebagai pembungkus tata letak, bukan pengganti elemen bermakna.
+## Kesesuaian dengan spesifikasi modul
 
-**2. Data Tabular & Lists**
-Tabel riwayat proyek pada bagian "Portofolio Karya" memuat `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, serta atribut `scope="col"` dan `scope="row"`. Bagian ini juga memuat dua jenis daftar HTML: `<ol>` (alur kerja proyek, karena memang berurutan) dan `<ul>` (daftar kompetensi dan bidang peminatan).
+| No | Persyaratan | Penerapan |
+| --- | --- | --- |
+| 1 | Struktur semantik HTML5 | `<header>` (logo dan `<nav>`), `<main>`, 5 `<section>` (termasuk Tentang Saya, Portofolio Karya, Formulir Layanan), 2 `<aside>`, `<footer>`. Tidak ada `<div>`. |
+| 2 | Tabel dan daftar | Satu tabel lengkap (`<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, `scope="col"` dan `scope="row"`), plus `<ul>` (navigasi, keahlian, kegiatan) dan `<ol>` (alur layanan). |
+| 3 | Formulir accessible | 3 `<fieldset>` dengan `<legend>`; 8 tipe kontrol: text, email, tel, number, radio, checkbox, select, textarea; semua memakai `<label for>` dan `required`. |
+| 4 | CSS modern | `style.css` eksternal, reset `box-sizing`, palet 60-30-10, tipografi Bricolage Grotesque dan Public Sans, `border-radius`, `box-shadow`, Grid dan Flexbox, `@media (max-width: 768px)`. |
+| 5 | Git dan GitHub Pages | Repositori publik `ppw-2026-week2-12S24006`, dipublikasikan lewat GitHub Pages. |
 
-**3. Formulir Interaktif & Accessible**
-Formulir pada bagian "Formulir Layanan" dikelompokkan dalam dua `<fieldset>` dengan `<legend>` ("Data Pemohon" dan "Detail Permintaan"), dan memuat delapan tipe kontrol input: `text`, `email`, `tel`, `number`, `radio`, `checkbox`, `select`, dan `textarea`. Setiap kontrol memiliki `<label for="...">` eksplisit, dan seluruh isian wajib memakai atribut `required`.
+### Palet warna 60-30-10
 
-**4. Estetika & Tata Letak CSS Modern**
-`style.css` menerapkan *universal box-sizing reset*, palet warna dengan proporsi 60% netral, 30% teks/struktur gelap, dan 10% aksen teal, tipografi modern (Fraunces untuk judul, Inter untuk isi), sudut membulat, bayangan lembut, tata letak CSS Grid dan Flexbox, serta *media query* `@media (max-width: 768px)` agar tetap responsif di layar ponsel.
+| Porsi | Peran | Warna terang | Warna gelap |
+| --- | --- | --- | --- |
+| 60% | Latar dan kartu | `#f3f6f5`, `#ffffff` | `#0c181d`, `#132228` |
+| 30% | Header, footer, kartu identitas, kepala tabel | `#12404f` | `#1a5468` |
+| 10% | Tombol dan sorotan (merah pita tenun) | `#b8322a` | `#ff8577` |
 
-**5. Pengelolaan Git & GitHub Pages**
-Lihat panduan deployment di bawah untuk mengunggah proyek ini ke repositori `ppw-2026-week2-12S24006` dan mengaktifkan GitHub Pages.
+### Fitur aksesibilitas (WCAG 2.2 AA)
 
-## Panduan Deployment ke GitHub Pages
+- Tautan "Lewati ke konten utama" di awal halaman
+- Bahasa halaman ditetapkan (`lang="id"`) dan urutan judul (h1 sampai h4) berurutan
+- Kontras teks dan komponen antarmuka memenuhi rasio AA pada mode terang dan gelap
+- Indikator fokus keyboard yang jelas di semua tautan dan kontrol
+- Ukuran target sentuh minimal 44 px pada tombol dan tautan navigasi
+- Setiap kolom formulir punya label eksplisit, petunjuk (`aria-describedby`), dan atribut `autocomplete`
+- Tabel dibungkus area yang bisa digulir dengan keyboard
+- Animasi gulir halus hanya aktif jika pengguna tidak meminta pengurangan gerak
+- Mode gelap otomatis mengikuti pengaturan sistem
 
-1. Buat repositori publik baru di GitHub dengan nama persis `ppw-2026-week2-12S24006`.
-2. Di folder proyek ini (berisi `index.html`, `style.css`, `README.md`), jalankan:
-   ```bash
-   git init
-   git add .
-   git commit -m "Inisialisasi portofolio tugas mandiri"
-   git branch -M main
-   git remote add origin https://github.com/<username-github-anda>/ppw-2026-week2-12S24006.git
-   git push -u origin main
-   ```
-3. Buka repositori di GitHub, masuk ke **Settings > Pages**.
-4. Pada bagian **Source**, pilih branch `main` dan folder `/ (root)`, lalu klik **Save**.
-4. Tunggu beberapa menit, situs akan aktif di alamat yang ditampilkan GitHub Pages, lalu tempelkan alamat tersebut ke bagian "Demo Live" pada README ini.
+---
 
-## Catatan
+## Menjalankan secara lokal
 
-- Ganti seluruh data contoh (nama, email, tautan GitHub) pada `index.html` dan README ini dengan data Anda yang sebenarnya sebelum dikumpulkan.
-- Formulir pada halaman ini bersifat demonstratif (belum terhubung ke backend sungguhan); atribut `action="/api/submit"` dapat diarahkan ke endpoint nyata jika diperlukan pada tugas lanjutan.
+```bash
+git clone https://github.com/USERNAME/ppw-2026-week2-12S24006.git
+cd ppw-2026-week2-12S24006
+```
+
+Buka `index.html` di peramban. Tidak perlu instalasi apa pun.
+
+---
+
+## Deploy ke GitHub Pages
+
+```bash
+git init
+git add .
+git commit -m "feat: tambah halaman portofolio HTML5 dan CSS"
+git branch -M main
+git remote add origin https://github.com/USERNAME/ppw-2026-week2-12S24006.git
+git push -u origin main
+```
+
+Lalu di GitHub: **Settings > Pages > Build and deployment > Source: Deploy from a branch > Branch: `main` / `(root)` > Save**. Tunggu satu sampai dua menit, lalu buka `https://USERNAME.github.io/ppw-2026-week2-12S24006/`.
+
+---
+
+## Catatan tentang formulir
+
+Karena GitHub Pages hanya menyajikan berkas statis, formulir memakai validasi bawaan peramban dan menampilkan pesan konfirmasi lewat `:target` CSS. Data belum dikirim ke server. Untuk pengembangan lanjutan, ganti `action` dengan alamat layanan formulir (misalnya Formspree) dan ubah `method` menjadi `post`.
+
+---
+
+## Ide pengembangan
+
+- Menambahkan tombol mode terang/gelap manual
+- Menambahkan tautan demo langsung pada tiap karya unggulan
+- Menambahkan sertifikat dan penghargaan pada bagian Tentang Saya
+
+---
+
+## Penulis
+
+**mrgrt**, mahasiswa Sistem Informasi, Institut Teknologi Del.
+
+## Lisensi
+
+Proyek ini berlisensi **MIT**. Lihat berkas `LICENSE`.
