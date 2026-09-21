@@ -1129,3 +1129,66 @@ footer a:hover {
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(244, 114, 182, 0.4);
 }
+
+/* Styling Khusus Modal PDF agar lebih lebar & responsif */
+.modal-box.modal-pdf-size {
+  width: 90%;
+  max-width: 900px; /* Diperlebar agar nyaman membaca dokumen */
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#modalDeskripsi {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Container & Iframe Viewer PDF */
+.pdf-container {
+  width: 100%;
+  height: 500px; /* Tinggi viewer PDF */
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Tombol Buka di Tab Baru */
+.pdf-footer-action {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.btn-pdf-external {
+  display: inline-block;
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-pdf-external:hover {
+  text-decoration: underline;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 640px) {
+  .pdf-container {
+    height: 350px; /* Menyesuaikan layar ponsel */
+  }
+}

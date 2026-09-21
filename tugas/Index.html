@@ -172,7 +172,7 @@
         <article class="project-card">
           <div class="project-img-box">
             <span class="card-badge">Cybersecurity</span>
-            <img src="/tugas/asset/KTI_WACANA SLAY_Strategi Integratif Pemantauan Perilaku, AI, Cyber Deception dalam Mencegah Pelanggaran Ujian-1.pdf" alt="Integrity-Guard">
+            <img src="/tugas/asseT/GUARD.jpeg" alt="Integrity-Guard">
           </div>
           <div class="project-card-body">
             <h3>Integrity-Guard</h3>
@@ -290,35 +290,75 @@
   </div>
 
   <!-- TAB 1: Publikasi Ilmiah -->
-  <div class="tab-content-block active-block" id="pub-ilmiah">
-    <div class="cards-grid-3">
-      <article class="doc-card">
-        <div class="doc-img-box">
-          <span class="badge-pink-pill">SINTA 5</span>
-          <img src="/tugas/asset/220-Article Text-601-1-10-20260617 (2).pdf" alt="Bukti Publikasi Jurnal SIMASII">
-        </div>
-        <div class="doc-card-body">
-          <h3>Kajian Literatur Trend Penelitian IoT</h3>
-          <p class="author-sub">Jurnal SIMASII Terakreditasi SINTA 5 (2026)</p>
-          <p class="card-desc">Penelitian mengenai perkembangan metodologi riset Internet of Things dan arsitektur sensor tertanam.</p>
-          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Publikasi Jurnal SIMASII', 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1000&q=80', 'Bukti terbit karya ilmiah pada Jurnal SIMASII SINTA 5 atas nama Margareth Bungaran Sitompul.')">Lihat Bukti Dokumentasi ↗</button>
-        </div>
-      </article>
 
-      <article class="doc-card">
-        <div class="doc-img-box">
-          <span class="badge-pink-pill">IEEE Format</span>
-          <img src="/tugas/asset/KTI_WACANA SLAY_Strategi Integratif Pemantauan Perilaku, AI, Cyber Deception dalam Mencegah Pelanggaran Ujian-1.pdf" alt="Bukti Conference Paper GEMASTIK">
-        </div>
-        <div class="doc-card-body">
-          <h3>Integrity-Guard (ABCD Framework)</h3>
-          <p class="author-sub">Conference Paper GEMASTIK XVII</p>
-          <p class="card-desc">Rancangan sistem pemantauan kecurangan ujian online berbasis AI dan analisis perilaku pengguna.</p>
-          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Conference Paper IEEE', 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80', 'Draf naskah ilmiah IEEE siap uji kompetisi GEMASTIK XVII.')">Lihat Bukti Dokumentasi ↗</button>
-        </div>
-      </article>
+<div class="tab-content-block active-block" id="pub-ilmiah">
+  <div class="cards-grid-3">
+    
+    <!-- Kartu 1 -->
+    <article class="doc-card">
+      <div class="doc-img-box">
+        <span class="badge-pink-pill">SINTA 5</span>
+        <img src="/tugas/asset/jurnal .png" alt="Bukti Publikasi Jurnal SIMASII">
+      </div>
+      <div class="doc-card-body">
+        <h3>Kajian Literatur Trend Penelitian IoT</h3>
+        <p class="author-sub">Jurnal SIMASII Terakreditasi SINTA 5 (2026)</p>
+        <p class="card-desc">Penelitian mengenai perkembangan metodologi riset Internet of Things dan arsitektur sensor tertanam.</p>
+        
+        <!-- Panggil fungsi bukaModal dengan URL PDF lokal/online kamu -->
+        <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Publikasi Jurnal SIMASII', '/tugas/asset/jurnal', 'Bukti terbit karya ilmiah pada Jurnal SIMASII SINTA 5 atas nama Margareth Bungaran Sitompul.')">
+          Lihat Bukti Dokumentasi ↗
+        </button>
+      </div>
+    </article>
+
+    <!-- Kartu 2 -->
+    <article class="doc-card">
+      <div class="doc-img-box">
+        <span class="badge-pink-pill">IEEE Format</span>
+        <img src="/tugas/asset/GEMASTIK.png" alt="Bukti Conference Paper GEMASTIK">
+      </div>
+      <div class="doc-card-body">
+        <h3>Integrity-Guard (ABCD Framework)</h3>
+        <p class="author-sub">Conference Paper GEMASTIK XVII</p>
+        <p class="card-desc">Rancangan sistem pemantauan kecurangan ujian online berbasis AI dan analisis perilaku pengguna.</p>
+        
+        <!-- Panggil fungsi bukaModal dengan URL PDF lokal/online kamu -->
+        <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Conference Paper IEEE', '/tugas/asset/GEMASTIK', 'Draf naskah ilmiah IEEE siap uji kompetisi GEMASTIK XVII.')">
+          Lihat Bukti Dokumentasi ↗
+        </button>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- POPUP MODAL UNTUK PDF                      -->
+<!-- ========================================== -->
+<div id="modalDokumen" class="modal-overlay">
+  <div class="modal-box modal-pdf-size">
+    <div class="modal-header">
+      <h3 id="modalJudul">Judul Dokumentasi</h3>
+      <button class="btn-close" onclick="tutupModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p id="modalDeskripsi">Deskripsi dokumentasi akan tampil di sini.</p>
+
+      <!-- Iframe untuk memuat file PDF -->
+      <div class="pdf-container">
+        <iframe id="modalPdf" src="" type="application/pdf"></iframe>
+      </div>
+      
+      <!-- Option Cadangan: Buka PDF di Tab Baru -->
+      <div class="pdf-footer-action">
+        <a id="btnBukaPdfBaru" href="#" target="_blank" class="btn-pdf-external">
+          Buka PDF di Tab Baru ↗
+        </a>
+      </div>
     </div>
   </div>
+</div>
 
   <!-- TAB 2: Pimpinan BEM -->
   <div class="tab-content-block" id="pimpinan-bem">
@@ -393,7 +433,7 @@
       <article class="doc-card">
         <div class="doc-img-box">
           <span class="badge-pink-pill">Magang Mandiri</span>
-          <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=600&q=80" alt="Dokumentasi Magang RSUD">
+          <img src="/tugas/asset/RSUD.png" alt="Dokumentasi Magang RSUD">
         </div>
         <div class="doc-card-body">
           <h3>Staff IT &amp; Server Intern</h3>
@@ -475,7 +515,7 @@
                 <span class="icon-box">✉️</span>
                 <div>
                   <small>Email Resmi</small>
-                  <strong>margareth.sitompul@del.ac.id</strong>
+                  <strong>margarethbungaran1@gmail</strong>
                 </div>
               </li>
               <li>
@@ -489,7 +529,7 @@
                 <span class="icon-box">🔗</span>
                 <div>
                   <small>GitHub / Social</small>
-                  <strong>@mrgrt-sitompul</strong>
+                  <strong>@MargarethSitompul</strong>
                 </div>
               </li>
             </ul>
@@ -581,7 +621,7 @@
       <p>&copy; 2026 Margareth Bungaran Sitompul (mrgrt). Tugas Mandiri PPW - IT Del.</p>
       <nav aria-label="Tautan kaki halaman">
         <ul>
-          <li><a href="https://github.com/USERNAME/ppw-2026-week2-12S24006" target="_blank" rel="noopener">GitHub Source</a></li>
+          <li><a href="https://github.com/margareth-sitompul/ppw-2026-week2-12S24006" target="_blank" rel="noopener">GitHub Source</a></li>
           <li><a href="#tentang">Kembali ke atas ↑</a></li>
         </ul>
       </nav>
