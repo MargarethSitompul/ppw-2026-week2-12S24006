@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Margareth Bungaran Sitompul, mahasiswa Sistem Informasi IT Del: profil, keahlian, riwayat proyek, prestasi, dan formulir layanan.">
+  <title>Margareth Bungaran Sitompul | Portofolio IT Del</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Hubungkan ke file CSS terpisah -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Aksesibilitas WCAG 2.2 AA -->
+  <a class="lewati" href="#konten">Lewati ke konten utama</a>
+
+  <!-- Header Navigasi -->
+  <header>
+    <a class="logo-itdel" href="#tentang" aria-label="Beranda Institut Teknologi Del">
+      <svg class="itdel-icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+        <rect width="36" height="36" rx="10" fill="#E11D48"/>
+        <path d="M9 10H27V14H20V26H16V14H9V10Z" fill="#FFFFFF"/>
+        <circle cx="24" cy="24" r="3" fill="#FFE4E6"/>
+      </svg>
+      <span>IT Del</span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#tentang" class="nav-link aktif">About</a></li>
+        <li><a href="#keahlian" class="nav-link">Skills</a></li>
+        <li><a href="#portofolio" class="nav-link">Projects</a></li>
+        <li><a href="#prestasi" class="nav-link">Prestasi &amp; Pengalaman</a></li>
+        <li><a href="#formulir" class="btn-contact-nav">Contact Me ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Konten Utama -->
+  <main id="konten">
+
+    <!-- SECTION 1: HERO / ABOUT ME -->
+    <section id="tentang" aria-labelledby="judul-tentang">
+      <div class="hero-container">
+        <div class="badge-pill">SISTEM INFORMASI IT DEL</div>
+        <h1 id="judul-tentang">Halo, Saya <br><span class="highlight-name">Margareth Sitompul</span></h1>
+        <p class="hero-desc">
+          Mahasiswa Sistem Informasi (NIM: 12S24006) berprestasi di Institut Teknologi Del. Berfokus pada perancangan basis data, pemrograman C tingkat sistem, publikasi karya ilmiah, serta pengembangan aplikasi web yang intuitif dan responsif.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <h3>10+</h3>
+            <p>Proyek Web &amp; Sistem</p>
+          </div>
+          <div class="stat-card">
+            <h3>SINTA 5</h3>
+            <p>Publikasi Jurnal SIMASII</p>
+          </div>
+          <div class="stat-card">
+            <h3>BEM</h3>
+            <p>Ketua Divisi Acara Depsenbud</p>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-pink" href="#portofolio">Lihat Portofolio ↘</a>
+          <a class="btn-outline" href="#prestasi">Lihat Prestasi</a>
+        </div>
+      </div>
+
+      <!-- Bingkai Foto Estetik -->
+      <div class="hero-photo-wrapper">
+        <div class="dashed-border-frame">
+          <div class="photo-inner-card">
+            <img src="./asset/pas foto_margareth.jpeg" alt="Foto Profil Margareth Bungaran Sitompul">
+            <div class="status-floating-pill">
+              <span class="sparkle-icon">✨</span>
+              <div>
+                <strong>Status</strong>
+                <small>Open to Projects &amp; Collaboration</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aside: Kartu Mahasiswa -->
+      <aside class="student-card-aside" aria-labelledby="judul-kartu">
+        <h2 id="judul-kartu">Kartu Mahasiswa Official</h2>
+        <dl>
+          <div><dt>Nama Lengkap</dt><dd>Margareth Bungaran Sitompul</dd></div>
+          <div><dt>NIM</dt><dd>12S24006</dd></div>
+          <div><dt>Program Studi</dt><dd>Sistem Informasi (CIS)</dd></div>
+          <div><dt>Kampus</dt><dd>Institut Teknologi Del, Balige</dd></div>
+          <div><dt>Minat</dt><dd>Basis Data, Pemrograman C, Web Dev</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- SECTION 2: SKILLS & TECH STACK -->
+    <section id="keahlian" aria-labelledby="judul-keahlian">
+      <div class="section-center-header">
+        <span class="sub-tag">KEAHLIAN &amp; TOOLS</span>
+        <h2 id="judul-keahlian">Tech Stack &amp; Skills</h2>
+      </div>
+
+      <!-- Marquee Animasi Log/Teknologi Bergerak Kesamping -->
+      <div class="tech-marquee-wrapper" aria-label="Animasi logo teknologi yang dipelajari">
+        <div class="tech-marquee-track">
+          <!-- Set 1 -->
+          <div class="tech-card"><span class="tech-icon">🌐</span><strong>HTML5 / CSS3</strong><small>Semantic &amp; Modern</small></div>
+          <div class="tech-card"><span class="tech-icon">⚡</span><strong>C System</strong><small>IPC &amp; Memory</small></div>
+          <div class="tech-card"><span class="tech-icon">☕</span><strong>Java OOP</strong><small>JDBC &amp; ORM</small></div>
+          <div class="tech-card"><span class="tech-icon">🐍</span><strong>Python AI</strong><small>UCS &amp; A* Search</small></div>
+          <div class="tech-card"><span class="tech-icon">🗄️</span><strong>SQL / ERD</strong><small>Database Architecture</small></div>
+          <div class="tech-card"><span class="tech-icon">📐</span><strong>Figma</strong><small>UI/UX Prototyping</small></div>
+          
+          <!-- Set 2 (Duplikasi untuk Smooth Loop) -->
+          <div class="tech-card"><span class="tech-icon">🌐</span><strong>HTML5 / CSS3</strong><small>Semantic &amp; Modern</small></div>
+          <div class="tech-card"><span class="tech-icon">⚡</span><strong>C System</strong><small>IPC &amp; Memory</small></div>
+          <div class="tech-card"><span class="tech-icon">☕</span><strong>Java OOP</strong><small>JDBC &amp; ORM</small></div>
+          <div class="tech-card"><span class="tech-icon">🐍</span><strong>Python AI</strong><small>UCS &amp; A* Search</small></div>
+          <div class="tech-card"><span class="tech-icon">🗄️</span><strong>SQL / ERD</strong><small>Database Architecture</small></div>
+          <div class="tech-card"><span class="tech-icon">📐</span><strong>Figma</strong><small>UI/UX Prototyping</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PORTOFOLIO KARYA -->
+    <section id="portofolio" aria-labelledby="judul-portofolio">
+      <div class="section-center-header">
+        <span class="sub-tag">KARYA TERBARU</span>
+        <h2 id="judul-portofolio">Featured Web Projects</h2>
+        <p class="section-desc">Proyek web pilihan yang dirancang dengan performa tinggi, tampilan responsif, dan antarmuka ramah pengguna.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-img-box">
+            <span class="card-badge">Web System</span>
+            <img src="/asset/RSUD.png" alt="DEL-MediCare">
+          </div>
+          <div class="project-card-body">
+            <h3>DEL-MediCare</h3>
+            <p>Sistem informasi web klinik kampus IT Del. Pendaftaran antrean daring terintegrasi dengan CIS kampus dan pencetakan surat sakit otomatis via Zimbra.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Web</span><span class="pill-tag">CIS IT Del</span><span class="pill-tag">Zimbra</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img-box">
+            <span class="card-badge">AI Assistant</span>
+            <img src="/asset/tobaverse.png" alt="TobaVerse">
+          </div>
+          <div class="project-card-body">
+            <h3>TobaVerse</h3>
+            <p>Asisten percakapan AI untuk wisata Danau Toba memanfaatkan teknologi RAG dwibahasa untuk menyusun rencana perjalanan sesuai anggaran.</p>
+            <div class="project-tags">
+              <span class="pill-tag">RAG</span><span class="pill-tag">Dwibahasa</span><span class="pill-tag">Hackathon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img-box">
+            <span class="card-badge">Cybersecurity</span>
+            <img src="/asset/GUARD.jpeg" alt="Integrity-Guard">
+          </div>
+          <div class="project-card-body">
+            <h3>Integrity-Guard</h3>
+            <p>Makalah IEEE yang mengusulkan ABCD Framework untuk mencegah kecurangan ujian berbasis komputer dengan pemantauan perilaku berbasis AI.</p>
+            <div class="project-tags">
+              <span class="pill-tag">Cybersecurity</span><span class="pill-tag">IEEE</span><span class="pill-tag">GEMASTIK XVII</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Tabel Semantik Riwayat Proyek -->
+      <div class="section-center-header" style="margin-top: 4rem;">
+        <h2>Rekapitulasi Proyek &amp; Mata Kuliah</h2>
+      </div>
+
+      <figure class="tabel-gulir" tabindex="0" role="region" aria-label="Tabel rekapitulasi proyek dan mata kuliah">
+        <table>
+          <caption>Rekapitulasi Mata Kuliah, Proyek Kelompok, dan Kompetisi Academic Margareth</caption>
+          <thead>
+            <tr>
+              <th scope="col">Karya / Proyek</th>
+              <th scope="col">Jenis</th>
+              <th scope="col">Konteks</th>
+              <th scope="col">Teknologi / Metode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">DEL-MediCare</th>
+              <td>Sistem informasi web</td>
+              <td>Layanan klinik &amp; pelaporan sakit mahasiswa IT Del</td>
+              <td>Web, Integrasi CIS &amp; Zimbra</td>
+            </tr>
+            <tr>
+              <th scope="row">TobaVerse</th>
+              <td>Asisten AI</td>
+              <td>Hackathon Wisata Danau Toba</td>
+              <td>RAG, Chatbot Dwibahasa</td>
+            </tr>
+            <tr>
+              <th scope="row">Integrity-Guard (ABCD Framework)</th>
+              <td>Makalah IEEE</td>
+              <td>Disiapkan untuk GEMASTIK XVII</td>
+              <td>Keamanan siber, Monitoring AI</td>
+            </tr>
+            <tr>
+              <th scope="row">Inklusi Keuangan UMKM &amp; Fintech</th>
+              <td>Karya Tulis Ilmiah</td>
+              <td>Karisma OJKI 2026</td>
+              <td>UTAUT2, SEM-PLS</td>
+            </tr>
+            <tr>
+              <th scope="row">SmartBiz AI</th>
+              <td>Proyek Kelompok</td>
+              <td>Kecerdasan Buatan (10S3001)</td>
+              <td>Python, UCS / A*, Spesifikasi PEAS</td>
+            </tr>
+            <tr>
+              <th scope="row">Rekomendasi Kursus Daring</th>
+              <td>Proyek Kelompok</td>
+              <td>Aljabar Linear</td>
+              <td>Collaborative Filtering, Cosine Similarity</td>
+            </tr>
+            <tr>
+              <th scope="row">Antony Mart</th>
+              <td>Perancangan Basis Data</td>
+              <td>Sistem Pemesanan &amp; Kasir Digital</td>
+              <td>ERD, Kamus Data, draw.io</td>
+            </tr>
+            <tr>
+              <th scope="row">Jadwal Imunisasi Anak</th>
+              <td>Tugas Pemrograman</td>
+              <td>Pemrograman Java</td>
+              <td>JDBC, JCF, Pewarisan, ORM Data Mapper</td>
+            </tr>
+            <tr>
+              <th scope="row">ImunisasiKu</th>
+              <td>Prototipe Aplikasi</td>
+              <td>Pelacakan Imunisasi Anak</td>
+              <td>Figma Prototype</td>
+            </tr>
+            <tr>
+              <th scope="row">Praktikum #5 File System &amp; I/O</th>
+              <td>Laporan Praktikum</td>
+              <td>Sistem Operasi (10S2203)</td>
+              <td>Bahasa C, Low-Level I/O, Standard I/O</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total Karya</th>
+              <td colspan="3">10 karya dari mata kuliah, proyek kelompok, dan kompetisi akademik</td>
+            </tr>
+          </tfoot>
+        </table>
+      </figure>
+    </section>
+
+ <!-- SECTION 4: PRESTASI & PENGALAMAN -->
+<section id="prestasi" aria-labelledby="judul-prestasi">
+  <div class="section-center-header">
+    <span class="sub-tag">REKAM JEJAK &amp; DOKUMENTASI</span>
+    <h2 id="judul-prestasi">Prestasi &amp; Pengalaman</h2>
+    <p class="section-desc">Kumpulan rekam jejak, kepemimpinan, karya ilmiah, serta bukti dokumentasi resmi yang telah dicapai.</p>
+  </div>
+
+  <!-- Filter Navigation Tabs -->
+  <div class="tabs-navigation" role="tablist">
+    <button class="tab-pill active" onclick="bukaKategori(event, 'pub-ilmiah')">📖 Publikasi Ilmiah</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'pimpinan-bem')">👥 Pimpinan BEM</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'ambassador')">🎗️ Ambassador</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'minat-bakat')">🎨 Minat &amp; Bakat</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'work-exp')">🧳 Work Experience</button>
+  </div>
+
+  <!-- TAB 1: Publikasi Ilmiah -->
+
+<div class="tab-content-block active-block" id="pub-ilmiah">
+  <div class="cards-grid-3">
+    
+    <!-- Kartu 1 -->
+    <article class="doc-card">
+      <div class="doc-img-box">
+        <span class="badge-pink-pill">SINTA 5</span>
+        <img src="/asset/jurnal .png" alt="Bukti Publikasi Jurnal SIMASII">
+      </div>
+      <div class="doc-card-body">
+        <h3>Kajian Literatur Trend Penelitian IoT</h3>
+        <p class="author-sub">Jurnal SIMASII Terakreditasi SINTA 5 (2026)</p>
+        <p class="card-desc">Penelitian mengenai perkembangan metodologi riset Internet of Things dan arsitektur sensor tertanam.</p>
+        
+        <!-- Panggil fungsi bukaModal dengan URL PDF lokal/online kamu -->
+        <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Publikasi Jurnal SIMASII', '/tugas/asset/jurnal', 'Bukti terbit karya ilmiah pada Jurnal SIMASII SINTA 5 atas nama Margareth Bungaran Sitompul.')">
+          Lihat Bukti Dokumentasi ↗
+        </button>
+      </div>
+    </article>
+
+    <!-- Kartu 2 -->
+    <article class="doc-card">
+      <div class="doc-img-box">
+        <span class="badge-pink-pill">IEEE Format</span>
+        <img src="/asset/GEMASTIK.png" alt="Bukti Conference Paper GEMASTIK">
+      </div>
+      <div class="doc-card-body">
+        <h3>Integrity-Guard (ABCD Framework)</h3>
+        <p class="author-sub">Conference Paper GEMASTIK XVII</p>
+        <p class="card-desc">Rancangan sistem pemantauan kecurangan ujian online berbasis AI dan analisis perilaku pengguna.</p>
+        
+        <!-- Panggil fungsi bukaModal dengan URL PDF lokal/online kamu -->
+        <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Conference Paper IEEE', '/tugas/asset/GEMASTIK', 'Draf naskah ilmiah IEEE siap uji kompetisi GEMASTIK XVII.')">
+          Lihat Bukti Dokumentasi ↗
+        </button>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- POPUP MODAL UNTUK PDF                      -->
+<!-- ========================================== -->
+<div id="modalDokumen" class="modal-overlay">
+  <div class="modal-box modal-pdf-size">
+    <div class="modal-header">
+      <h3 id="modalJudul">Judul Dokumentasi</h3>
+      <button class="btn-close" onclick="tutupModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p id="modalDeskripsi">Deskripsi dokumentasi akan tampil di sini.</p>
+
+      <!-- Iframe untuk memuat file PDF -->
+      <div class="pdf-container">
+        <iframe id="modalPdf" src="" type="application/pdf"></iframe>
+      </div>
+      
+      <!-- Option Cadangan: Buka PDF di Tab Baru -->
+      <div class="pdf-footer-action">
+        <a id="btnBukaPdfBaru" href="#" target="_blank" class="btn-pdf-external">
+          Buka PDF di Tab Baru ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- TAB 2: Pimpinan BEM -->
+  <div class="tab-content-block" id="pimpinan-bem">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">BEM IT Del</span>
+          <img src="/asset/bem.jpeg" alt="Dokumentasi BEM IT Del">
+        </div>
+        <div class="doc-card-body">
+          <h3>Ketua Divisi Acara Depsenbud</h3>
+          <p class="author-sub">BEM Institut Teknologi Del (2026)</p>
+          <p class="card-desc">Memimpin perancangan dan eksekusi Festival Budaya IT Del 2026 yang melibatkan 9 himpunan mahasiswa.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Kepemimpinan BEM', 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80', 'SK Pengangkatan &amp; Foto Kegiatan Festival Budaya IT Del 2026.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- TAB 3: Ambassador -->
+  <div class="tab-content-block" id="ambassador">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">Ambassador</span>
+          <img src="/asset/ambassador privy.jpeg" alt="Dokumentasi Privy Campus Ambassador">
+        </div>
+        <div class="doc-card-body">
+          <h3>Privy Campus Ambassador</h3>
+          <p class="author-sub">Perwakilan Depsenbud IT Del (2026)</p>
+          <p class="card-desc">Sosialisasi identitas digital, keandalan dokumen elektronik, dan literasi teknologi di lingkungan kampus.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Privy Campus Ambassador', 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Penunjukan Resmi Privy Campus Ambassador 2026.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- TAB 4: Minat & Bakat -->
+  <div class="tab-content-block" id="minat-bakat">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">UKM PSM</span>
+          <img src="/asset/psm.jpeg" alt="Dokumentasi Paduan Suara">
+        </div>
+        <div class="doc-card-body">
+          <h3>Paduan Suara &amp; Seni Vokal</h3>
+          <p class="author-sub">UKM PSM IT Del</p>
+          <p class="card-desc">Aktif dalam penampilan resmi wisuda kampus dan kompetisi seni musik antar mahasiswa.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Paduan Suara', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80', 'Foto Penampilan UKM Paduan Suara Mahasiswa IT Del.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">Public Speaking</span>
+          <img src="/asset/mc.jpeg" alt="Dokumentasi Master of Ceremony">
+        </div>
+        <div class="doc-card-body">
+          <h3>Master of Ceremony (MC)</h3>
+          <p class="author-sub">Acara Formal &amp; Semi-Formal Kampus</p>
+          <p class="card-desc">Memandu berbagai seminar nasional dan acara protokol resmi di lingkungan IT Del.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi MC Kampus', 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80', 'Dokumentasi Tugas MC pada Wisuda &amp; Festival Kampus.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- TAB 5: Work Experience -->
+  <div class="tab-content-block" id="work-exp">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">Magang Mandiri</span>
+          <img src="/asset/RSUD.png" alt="Dokumentasi Magang RSUD">
+        </div>
+        <div class="doc-card-body">
+          <h3>Staff IT &amp; Server Intern</h3>
+          <p class="company-sub">RSUD Dr. Ferdinand Lumbantobing Sibolga</p>
+          <p class="card-desc">Pengelolaan basis data SIMRS, maintenance server utama, dan backup data medis pasien.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Magang RSUD', 'https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1000&q=80', 'Surat Keterangan Selesai Magang &amp; Laporan Kerja RSUD Sibolga.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Jendela Popup Modal -->
+  <div id="modal-bukti" class="modal-overlay" onclick="tutupModal(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="tutupModalDirect()">&times;</button>
+      <h3 id="modal-judul">Judul Dokumentasi</h3>
+      <div class="modal-img-container">
+        <img id="modal-img" src="" alt="Bukti Dokumentasi">
+      </div>
+      <p id="modal-desc">Keterangan bukti dokumentasi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Fungsi JavaScript untuk Switch Tab & Popup Modal -->
+<script>
+  function bukaKategori(evt, namaTab) {
+    var i, tabcontent, tabpills;
+
+    // Sembunyikan semua blok konten
+    tabcontent = document.getElementsByClassName("tab-content-block");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+      tabcontent[i].classList.remove("active-block");
+    }
+
+    // Hilangkan status aktif di semua tombol
+    tabpills = document.getElementsByClassName("tab-pill");
+    for (i = 0; i < tabpills.length; i++) {
+      tabpills[i].classList.remove("active");
+    }
+
+    // Tampilkan kategori yang dipilih dan aktifkan tombolnya
+    document.getElementById(namaTab).style.display = "block";
+    document.getElementById(namaTab).classList.add("active-block");
+    evt.currentTarget.classList.add("active");
+  }
+
+  function bukaModal(judul, urlGambar, deskripsi) {
+    document.getElementById('modal-judul').innerText = judul;
+    document.getElementById('modal-img').src = urlGambar;
+    document.getElementById('modal-desc').innerText = deskripsi;
+    document.getElementById('modal-bukti').style.display = 'flex';
+  }
+
+  function tutupModalDirect() {
+    document.getElementById('modal-bukti').style.display = 'none';
+  }
+
+  function tutupModal(event) {
+    if (event.target.id === 'modal-bukti') {
+      document.getElementById('modal-bukti').style.display = 'none';
+    }
+  }
+</script>
+    <!-- SECTION 5: FORMULIR LAYANAN & KONTAK -->
+    <section id="formulir" aria-labelledby="judul-formulir">
+      <div class="form-section-card">
+        <div class="form-grid">
+          
+          <!-- Informasi Kontak Kiri -->
+          <div class="contact-info-col">
+            <span class="badge-pink font-mono">Get In Touch</span>
+            <h2>Mari Bekerja Sama!</h2>
+            <p>Tertarik berkolaborasi atau punya pertanyaan? Silakan hubungi saya melalui formulir ini atau media sosial.</p>
+            
+            <ul class="contact-details-list">
+              <li>
+                <span class="icon-box">✉️</span>
+                <div>
+                  <small>Email Resmi</small>
+                  <strong>margarethbungaran1@gmail</strong>
+                </div>
+              </li>
+              <li>
+                <span class="icon-box">📍</span>
+                <div>
+                  <small>Lokasi Kampus</small>
+                  <strong>IT Del, Laguboti, Balige, Sumatera Utara</strong>
+                </div>
+              </li>
+              <li>
+                <span class="icon-box">🔗</span>
+                <div>
+                  <small>GitHub / Social</small>
+                  <strong>@MargarethSitompul</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulir Kanan -->
+          <div class="form-inputs-col">
+            <p id="terkirim" role="status" tabindex="-1">✅ Formulir Anda berhasil terkirim. Terima kasih telah menghubungi Margareth!</p>
+            
+            <form action="#terkirim" method="get" autocomplete="on">
+              <fieldset>
+                <legend>Data Pemesan</legend>
+                <div class="form-group">
+                  <label for="nama">NAMA LENGKAP</label>
+                  <input type="text" id="nama" name="nama" autocomplete="name" minlength="3" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">EMAIL</label>
+                  <input type="email" id="email" name="email" autocomplete="email" aria-describedby="bantu-email" placeholder="nama@email.com" required>
+                  <small id="bantu-email">Contoh: nama@domain.com</small>
+                </div>
+                <div class="form-group">
+                  <label for="telepon">NOMOR TELEPON / WHATSAPP</label>
+                  <input type="tel" id="telepon" name="telepon" autocomplete="tel" inputmode="tel" 
+                         pattern="[0-9+\-\s]{9,16}" title="Gunakan 9-16 karakter: angka, spasi, atau +" 
+                         aria-describedby="bantu-telepon" placeholder="081234567890" required>
+                  <small id="bantu-telepon">Contoh: 0812 3456 7890</small>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Jenis Layanan</legend>
+                <div class="radio-options">
+                  <label class="radio-label">
+                    <input type="radio" id="layanan-db" name="layanan" value="basis-data" required>
+                    <span>Konsultasi Perancangan Basis Data (ERD/PDM)</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" id="layanan-web" name="layanan" value="web" required>
+                    <span>Konsultasi Pembuatan Web Accessible</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" id="layanan-ilmiah" name="layanan" value="ilmiah" required>
+                    <span>Diskusi Penulisan Karya Ilmiah &amp; IoT</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Jadwal Pertemuan</legend>
+                <div class="form-group">
+                  <label for="media">MEDIA PERTEMUAN</label>
+                  <select id="media" name="media" required>
+                    <option value="">Pilih media pertemuan</option>
+                    <option value="meet">Google Meet</option>
+                    <option value="zoom">Zoom Meeting</option>
+                    <option value="kampus">Tatap Muka di Kampus IT Del</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="durasi">DURASI KONSULTASI (JAM)</label>
+                  <input type="number" id="durasi" name="durasi" min="1" max="3" step="1" inputmode="numeric" placeholder="1-3 jam" required>
+                </div>
+                <div class="form-group">
+                  <label for="pesan">PESAN KEBUTUHAN</label>
+                  <textarea id="pesan" name="pesan" rows="4" minlength="20" maxlength="500" placeholder="Tuliskan detail kebutuhan konsultasi Anda..." required></textarea>
+                </div>
+                <div class="checkbox-label">
+                  <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+                  <label for="setuju">Saya menyetujui data ini digunakan untuk merespons permintaan saya.</label>
+                </div>
+              </fieldset>
+
+              <div class="form-actions">
+                <button class="btn-pink btn-block" type="submit">Kirim Pesan ↗</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 Margareth Bungaran Sitompul (mrgrt). Tugas Mandiri PPW - IT Del.</p>
+      <nav aria-label="Tautan kaki halaman">
+        <ul>
+          <li><a href="https://github.com/margareth-sitompul/ppw-2026-week2-12S24006" target="_blank" rel="noopener">GitHub Source</a></li>
+          <li><a href="#tentang">Kembali ke atas ↑</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
