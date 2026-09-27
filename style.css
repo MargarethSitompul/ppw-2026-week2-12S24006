@@ -1192,3 +1192,33 @@ footer a:hover {
     height: 350px; /* Menyesuaikan layar ponsel */
   }
 }
+
+/* ==========================================================================
+   BOOTSTRAP INTEGRATION (PEMELENGKAP)
+   Bootstrap dimuat lebih dahulu; aturan berikut menjaga tampilan asli.
+   ========================================================================== */
+.project-table-heading {
+  margin-top: 4rem;
+}
+
+/* Bootstrap .form-control/.form-select mengikuti identitas custom portfolio. */
+.form-group .form-control,
+.form-group .form-select {
+  min-height: 48px;
+}
+
+/* Bootstrap utility .btn tetap mewarisi visual custom dari class btn-pink/btn-outline. */
+.btn-pink,
+.btn-outline,
+.btn-doc-link {
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
