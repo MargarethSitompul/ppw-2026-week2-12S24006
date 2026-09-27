@@ -11,10 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
   
-  <!-- Bootstrap 5.3.3: framework pelengkap untuk grid, komponen, utilities, dan form -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <!-- Custom CSS: mempertahankan desain asli portfolio -->
+  <!-- Hubungkan ke file CSS terpisah -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
   <a class="lewati" href="#konten">Lewati ke konten utama</a>
 
   <!-- Header Navigasi -->
-  <header class="navbar navbar-expand-lg">
+  <header>
     <a class="logo-itdel" href="#tentang" aria-label="Beranda Institut Teknologi Del">
       <svg class="itdel-icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
         <rect width="36" height="36" rx="10" fill="#E11D48"/>
@@ -44,7 +41,7 @@
   </header>
 
   <!-- Konten Utama -->
-  <main id="konten" class="w-100">
+  <main id="konten">
 
     <!-- SECTION 1: HERO / ABOUT ME -->
     <section id="tentang" aria-labelledby="judul-tentang">
@@ -72,8 +69,8 @@
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-pink" href="#portofolio">Lihat Portofolio ↘</a>
-          <a class="btn btn-outline" href="#prestasi">Lihat Prestasi</a>
+          <a class="btn-pink" href="#portofolio">Lihat Portofolio ↘</a>
+          <a class="btn-outline" href="#prestasi">Lihat Prestasi</a>
         </div>
       </div>
 
@@ -81,7 +78,7 @@
       <div class="hero-photo-wrapper">
         <div class="dashed-border-frame">
           <div class="photo-inner-card">
-            <img class="img-fluid" src="asset/pas foto_margareth.jpeg" alt="Foto Profil Margareth Bungaran Sitompul">
+            <img src="./asset/pas foto_margareth.jpeg" alt="Foto Profil Margareth Bungaran Sitompul">
             <div class="status-floating-pill">
               <span class="sparkle-icon">✨</span>
               <div>
@@ -147,7 +144,7 @@
         <article class="project-card">
           <div class="project-img-box">
             <span class="card-badge">Web System</span>
-            <img class="img-fluid" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="DEL-MediCare">
+            <img src="/asset/RSUD.png" alt="DEL-MediCare">
           </div>
           <div class="project-card-body">
             <h3>DEL-MediCare</h3>
@@ -161,7 +158,7 @@
         <article class="project-card">
           <div class="project-img-box">
             <span class="card-badge">AI Assistant</span>
-            <img class="img-fluid" src="asset/tobaverse.png" alt="TobaVerse">
+            <img src="/asset/tobaverse.png" alt="TobaVerse">
           </div>
           <div class="project-card-body">
             <h3>TobaVerse</h3>
@@ -175,7 +172,7 @@
         <article class="project-card">
           <div class="project-img-box">
             <span class="card-badge">Cybersecurity</span>
-            <img class="img-fluid" src="asset/GUARD.jpeg" alt="Integrity-Guard">
+            <img src="/asset/GUARD.jpeg" alt="Integrity-Guard">
           </div>
           <div class="project-card-body">
             <h3>Integrity-Guard</h3>
@@ -188,12 +185,12 @@
       </div>
 
       <!-- Tabel Semantik Riwayat Proyek -->
-      <div class="section-center-header project-table-heading">
+      <div class="section-center-header" style="margin-top: 4rem;">
         <h2>Rekapitulasi Proyek &amp; Mata Kuliah</h2>
       </div>
 
       <figure class="tabel-gulir" tabindex="0" role="region" aria-label="Tabel rekapitulasi proyek dan mata kuliah">
-        <table class="table table-hover align-middle mb-0">
+        <table>
           <caption>Rekapitulasi Mata Kuliah, Proyek Kelompok, dan Kompetisi Academic Margareth</caption>
           <thead>
             <tr>
@@ -275,211 +272,233 @@
       </figure>
     </section>
 
-    <!-- SECTION 4: PRESTASI & PENGALAMAN -->
-    <section id="prestasi" aria-labelledby="judul-prestasi">
-      <div class="section-center-header">
-        <span class="sub-tag">REKAM JEJAK &amp; DOKUMENTASI</span>
-        <h2 id="judul-prestasi">Prestasi &amp; Pengalaman</h2>
-        <p class="section-desc">Kumpulan rekam jejak, kepemimpinan, karya ilmiah, serta bukti dokumentasi resmi yang telah dicapai.</p>
+ <!-- SECTION 4: PRESTASI & PENGALAMAN -->
+<section id="prestasi" aria-labelledby="judul-prestasi">
+  <div class="section-center-header">
+    <span class="sub-tag">REKAM JEJAK &amp; DOKUMENTASI</span>
+    <h2 id="judul-prestasi">Prestasi &amp; Pengalaman</h2>
+    <p class="section-desc">Kumpulan rekam jejak, kepemimpinan, karya ilmiah, serta bukti dokumentasi resmi yang telah dicapai.</p>
+  </div>
+
+  <!-- Filter Navigation Tabs -->
+  <div class="tabs-navigation" role="tablist">
+    <button class="tab-pill active" onclick="bukaKategori(event, 'pub-ilmiah')">📖 Publikasi Ilmiah</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'pimpinan-bem')">👥 Pimpinan BEM</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'ambassador')">🎗️ Ambassador</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'minat-bakat')">🎨 Minat &amp; Bakat</button>
+    <button class="tab-pill" onclick="bukaKategori(event, 'work-exp')">🧳 Work Experience</button>
+  </div>
+
+  <!-- TAB 1: Publikasi Ilmiah -->
+
+<div class="tab-content-block active-block" id="pub-ilmiah">
+  <div class="cards-grid-3">
+    
+    <!-- Kartu 1 -->
+    <article class="doc-card">
+      <div class="doc-img-box">
+        <span class="badge-pink-pill">SINTA 5</span>
+        <img src="/asset/jurnal .png" alt="Bukti Publikasi Jurnal SIMASII">
       </div>
-
-      <!-- Filter Navigation Tabs -->
-      <div class="tabs-navigation" role="tablist" aria-label="Kategori prestasi dan pengalaman">
-        <button type="button" class="tab-pill active" role="tab" aria-selected="true" aria-controls="pub-ilmiah" onclick="bukaKategori(event, 'pub-ilmiah')">📖 Publikasi Ilmiah</button>
-        <button type="button" class="tab-pill" role="tab" aria-selected="false" aria-controls="pimpinan-bem" onclick="bukaKategori(event, 'pimpinan-bem')">👥 Pimpinan BEM</button>
-        <button type="button" class="tab-pill" role="tab" aria-selected="false" aria-controls="ambassador" onclick="bukaKategori(event, 'ambassador')">🎗️ Ambassador</button>
-        <button type="button" class="tab-pill" role="tab" aria-selected="false" aria-controls="minat-bakat" onclick="bukaKategori(event, 'minat-bakat')">🎨 Minat &amp; Bakat</button>
-        <button type="button" class="tab-pill" role="tab" aria-selected="false" aria-controls="work-exp" onclick="bukaKategori(event, 'work-exp')">🧳 Work Experience</button>
+      <div class="doc-card-body">
+        <h3>Kajian Literatur Trend Penelitian IoT</h3>
+        <p class="author-sub">Jurnal SIMASII Terakreditasi SINTA 5 (2026)</p>
+        <p class="card-desc">Penelitian mengenai perkembangan metodologi riset Internet of Things dan arsitektur sensor tertanam.</p>
+        
+        <!-- Panggil fungsi bukaModal dengan URL PDF lokal/online kamu -->
+        <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Publikasi Jurnal SIMASII', '/tugas/asset/jurnal', 'Bukti terbit karya ilmiah pada Jurnal SIMASII SINTA 5 atas nama Margareth Bungaran Sitompul.')">
+          Lihat Bukti Dokumentasi ↗
+        </button>
       </div>
+    </article>
 
-      <!-- TAB 1: Publikasi Ilmiah -->
-      <div class="tab-content-block active-block" id="pub-ilmiah">
-        <div class="cards-grid-3">
-          
-          <!-- Kartu 1 -->
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">SINTA 5</span>
-              <img class="img-fluid" src="asset/jurnal .png" alt="Bukti Publikasi Jurnal SIMASII">
-            </div>
-            <div class="doc-card-body">
-              <h3>Kajian Literatur Trend Penelitian IoT</h3>
-              <p class="author-sub">Jurnal SIMASII Terakreditasi SINTA 5 (2026)</p>
-              <p class="card-desc">Penelitian mengenai perkembangan metodologi riset Internet of Things dan arsitektur sensor tertanam.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi Publikasi Jurnal SIMASII', 'asset/jurnal .png', 'Bukti terbit karya ilmiah pada Jurnal SIMASII SINTA 5 atas nama Margareth Bungaran Sitompul.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
+    <!-- Kartu 2 -->
+    <article class="doc-card">
+      <div class="doc-img-box">
+        <span class="badge-pink-pill">IEEE Format</span>
+        <img src="/asset/GEMASTIK.png" alt="Bukti Conference Paper GEMASTIK">
+      </div>
+      <div class="doc-card-body">
+        <h3>Integrity-Guard (ABCD Framework)</h3>
+        <p class="author-sub">Conference Paper GEMASTIK XVII</p>
+        <p class="card-desc">Rancangan sistem pemantauan kecurangan ujian online berbasis AI dan analisis perilaku pengguna.</p>
+        
+        <!-- Panggil fungsi bukaModal dengan URL PDF lokal/online kamu -->
+        <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Conference Paper IEEE', '/tugas/asset/GEMASTIK', 'Draf naskah ilmiah IEEE siap uji kompetisi GEMASTIK XVII.')">
+          Lihat Bukti Dokumentasi ↗
+        </button>
+      </div>
+    </article>
 
-          <!-- Kartu 2 -->
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">IEEE Format</span>
-              <img class="img-fluid" src="asset/GEMASTIK.png" alt="Bukti Conference Paper GEMASTIK">
-            </div>
-            <div class="doc-card-body">
-              <h3>Integrity-Guard (ABCD Framework)</h3>
-              <p class="author-sub">Conference Paper GEMASTIK XVII</p>
-              <p class="card-desc">Rancangan sistem pemantauan kecurangan ujian online berbasis AI dan analisis perilaku pengguna.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi Conference Paper IEEE', 'asset/GEMASTIK.png', 'Draf naskah ilmiah IEEE siap uji kompetisi GEMASTIK XVII.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
+  </div>
+</div>
 
+<!-- ========================================== -->
+<!-- POPUP MODAL UNTUK PDF                      -->
+<!-- ========================================== -->
+<div id="modalDokumen" class="modal-overlay">
+  <div class="modal-box modal-pdf-size">
+    <div class="modal-header">
+      <h3 id="modalJudul">Judul Dokumentasi</h3>
+      <button class="btn-close" onclick="tutupModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p id="modalDeskripsi">Deskripsi dokumentasi akan tampil di sini.</p>
+
+      <!-- Iframe untuk memuat file PDF -->
+      <div class="pdf-container">
+        <iframe id="modalPdf" src="" type="application/pdf"></iframe>
+      </div>
+      
+      <!-- Option Cadangan: Buka PDF di Tab Baru -->
+      <div class="pdf-footer-action">
+        <a id="btnBukaPdfBaru" href="#" target="_blank" class="btn-pdf-external">
+          Buka PDF di Tab Baru ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- TAB 2: Pimpinan BEM -->
+  <div class="tab-content-block" id="pimpinan-bem">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">BEM IT Del</span>
+          <img src="/asset/bem.jpeg" alt="Dokumentasi BEM IT Del">
         </div>
-      </div>
-
-      <!-- TAB 2: Pimpinan BEM -->
-      <div class="tab-content-block" id="pimpinan-bem" hidden>
-        <div class="cards-grid-3">
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">BEM IT Del</span>
-              <img class="img-fluid" src="asset/bem.jpeg" alt="Dokumentasi BEM IT Del">
-            </div>
-            <div class="doc-card-body">
-              <h3>Ketua Divisi Acara Depsenbud</h3>
-              <p class="author-sub">BEM Institut Teknologi Del (2026)</p>
-              <p class="card-desc">Memimpin perancangan dan eksekusi Festival Budaya IT Del 2026 yang melibatkan 9 himpunan mahasiswa.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi Kepemimpinan BEM', 'asset/bem.jpeg', 'SK Pengangkatan &amp; Foto Kegiatan Festival Budaya IT Del 2026.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
+        <div class="doc-card-body">
+          <h3>Ketua Divisi Acara Depsenbud</h3>
+          <p class="author-sub">BEM Institut Teknologi Del (2026)</p>
+          <p class="card-desc">Memimpin perancangan dan eksekusi Festival Budaya IT Del 2026 yang melibatkan 9 himpunan mahasiswa.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Kepemimpinan BEM', 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80', 'SK Pengangkatan &amp; Foto Kegiatan Festival Budaya IT Del 2026.')">Lihat Bukti Dokumentasi ↗</button>
         </div>
-      </div>
+      </article>
+    </div>
+  </div>
 
-      <!-- TAB 3: Ambassador -->
-      <div class="tab-content-block" id="ambassador" hidden>
-        <div class="cards-grid-3">
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">Ambassador</span>
-              <img class="img-fluid" src="asset/ambassador privy.jpeg" alt="Dokumentasi Privy Campus Ambassador">
-            </div>
-            <div class="doc-card-body">
-              <h3>Privy Campus Ambassador</h3>
-              <p class="author-sub">Perwakilan Depsenbud IT Del (2026)</p>
-              <p class="card-desc">Sosialisasi identitas digital, keandalan dokumen elektronik, dan literasi teknologi di lingkungan kampus.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi Privy Campus Ambassador', 'asset/ambassador privy.jpeg', 'Sertifikat Penunjukan Resmi Privy Campus Ambassador 2026.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
+  <!-- TAB 3: Ambassador -->
+  <div class="tab-content-block" id="ambassador">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">Ambassador</span>
+          <img src="/asset/ambassador.jpeg" alt="Dokumentasi Privy Campus Ambassador">
         </div>
-      </div>
-
-      <!-- TAB 4: Minat & Bakat -->
-      <div class="tab-content-block" id="minat-bakat" hidden>
-        <div class="cards-grid-3">
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">UKM PSM</span>
-              <img class="img-fluid" src="asset/psm.jpeg" alt="Dokumentasi Paduan Suara">
-            </div>
-            <div class="doc-card-body">
-              <h3>Paduan Suara &amp; Seni Vokal</h3>
-              <p class="author-sub">UKM PSM IT Del</p>
-              <p class="card-desc">Aktif dalam penampilan resmi wisuda kampus dan kompetisi seni musik antar mahasiswa.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi Paduan Suara', 'asset/psm.jpeg', 'Foto Penampilan UKM Paduan Suara Mahasiswa IT Del.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
-
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">Public Speaking</span>
-              <img class="img-fluid" src="asset/mc.jpeg" alt="Dokumentasi Master of Ceremony">
-            </div>
-            <div class="doc-card-body">
-              <h3>Master of Ceremony (MC)</h3>
-              <p class="author-sub">Acara Formal &amp; Semi-Formal Kampus</p>
-              <p class="card-desc">Memandu berbagai seminar nasional dan acara protokol resmi di lingkungan IT Del.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi MC Kampus', 'asset/mc.jpeg', 'Dokumentasi Tugas MC pada Wisuda &amp; Festival Kampus.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
+        <div class="doc-card-body">
+          <h3>Privy Campus Ambassador</h3>
+          <p class="author-sub">Perwakilan Depsenbud IT Del (2026)</p>
+          <p class="card-desc">Sosialisasi identitas digital, keandalan dokumen elektronik, dan literasi teknologi di lingkungan kampus.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Privy Campus Ambassador', 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Penunjukan Resmi Privy Campus Ambassador 2026.')">Lihat Bukti Dokumentasi ↗</button>
         </div>
-      </div>
+      </article>
+    </div>
+  </div>
 
-      <!-- TAB 5: Work Experience -->
-      <div class="tab-content-block" id="work-exp" hidden>
-        <div class="cards-grid-3">
-          <article class="doc-card">
-            <div class="doc-img-box">
-              <span class="badge-pink-pill">Magang Mandiri</span>
-              <img class="img-fluid" src="asset/RSUD.png" alt="Dokumentasi Magang RSUD">
-            </div>
-            <div class="doc-card-body">
-              <h3>Staff IT &amp; Server Intern</h3>
-              <p class="company-sub">RSUD Dr. Ferdinand Lumbantobing Sibolga</p>
-              <p class="card-desc">Pengelolaan basis data SIMRS, maintenance server utama, dan backup data medis pasien.</p>
-              <button class="btn btn-doc-link" onclick="bukaModal('Dokumentasi Magang RSUD', 'asset/RSUD.png', 'Surat Keterangan Selesai Magang &amp; Laporan Kerja RSUD Sibolga.')">
-                Lihat Bukti Dokumentasi ↗
-              </button>
-            </div>
-          </article>
+  <!-- TAB 4: Minat & Bakat -->
+  <div class="tab-content-block" id="minat-bakat">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">UKM PSM</span>
+          <img src="/asset/psm.jpeg" alt="Dokumentasi Paduan Suara">
         </div>
-      </div>
-
-      <!-- Popup Modal tunggal untuk Menampilkan Bukti Gambar/Dokumen -->
-      <div id="modal-bukti" class="modal-overlay" onclick="tutupModal(event)">
-        <div class="modal-content">
-          <button class="modal-close" onclick="tutupModalDirect()">&times;</button>
-          <h3 id="modal-judul">Judul Dokumentasi</h3>
-          <div class="modal-img-container">
-            <img id="modal-img" src="" alt="Bukti Dokumentasi">
-          </div>
-          <p id="modal-desc">Keterangan bukti dokumentasi.</p>
+        <div class="doc-card-body">
+          <h3>Paduan Suara &amp; Seni Vokal</h3>
+          <p class="author-sub">UKM PSM IT Del</p>
+          <p class="card-desc">Aktif dalam penampilan resmi wisuda kampus dan kompetisi seni musik antar mahasiswa.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Paduan Suara', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80', 'Foto Penampilan UKM Paduan Suara Mahasiswa IT Del.')">Lihat Bukti Dokumentasi ↗</button>
         </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">Public Speaking</span>
+          <img src="/asset/mc.jpeg" alt="Dokumentasi Master of Ceremony">
+        </div>
+        <div class="doc-card-body">
+          <h3>Master of Ceremony (MC)</h3>
+          <p class="author-sub">Acara Formal &amp; Semi-Formal Kampus</p>
+          <p class="card-desc">Memandu berbagai seminar nasional dan acara protokol resmi di lingkungan IT Del.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi MC Kampus', 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80', 'Dokumentasi Tugas MC pada Wisuda &amp; Festival Kampus.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- TAB 5: Work Experience -->
+  <div class="tab-content-block" id="work-exp">
+    <div class="cards-grid-3">
+      <article class="doc-card">
+        <div class="doc-img-box">
+          <span class="badge-pink-pill">Magang Mandiri</span>
+          <img src="/asset/RSUD.png" alt="Dokumentasi Magang RSUD">
+        </div>
+        <div class="doc-card-body">
+          <h3>Staff IT &amp; Server Intern</h3>
+          <p class="company-sub">RSUD Dr. Ferdinand Lumbantobing Sibolga</p>
+          <p class="card-desc">Pengelolaan basis data SIMRS, maintenance server utama, dan backup data medis pasien.</p>
+          <button class="btn-doc-link" onclick="bukaModal('Dokumentasi Magang RSUD', 'https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1000&q=80', 'Surat Keterangan Selesai Magang &amp; Laporan Kerja RSUD Sibolga.')">Lihat Bukti Dokumentasi ↗</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Jendela Popup Modal -->
+  <div id="modal-bukti" class="modal-overlay" onclick="tutupModal(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="tutupModalDirect()">&times;</button>
+      <h3 id="modal-judul">Judul Dokumentasi</h3>
+      <div class="modal-img-container">
+        <img id="modal-img" src="" alt="Bukti Dokumentasi">
       </div>
-    </section>
+      <p id="modal-desc">Keterangan bukti dokumentasi.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- JavaScript Switch Tab & Modal -->
-    <script>
-      function bukaKategori(evt, namaTab) {
-        const tabcontent = document.getElementsByClassName("tab-content-block");
-        const tabpills = document.getElementsByClassName("tab-pill");
+<!-- Fungsi JavaScript untuk Switch Tab & Popup Modal -->
+<script>
+  function bukaKategori(evt, namaTab) {
+    var i, tabcontent, tabpills;
 
-        for (const panel of tabcontent) {
-          panel.hidden = true;
-          panel.classList.remove("active-block");
-        }
+    // Sembunyikan semua blok konten
+    tabcontent = document.getElementsByClassName("tab-content-block");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+      tabcontent[i].classList.remove("active-block");
+    }
 
-        for (const tab of tabpills) {
-          tab.classList.remove("active");
-          tab.setAttribute("aria-selected", "false");
-        }
+    // Hilangkan status aktif di semua tombol
+    tabpills = document.getElementsByClassName("tab-pill");
+    for (i = 0; i < tabpills.length; i++) {
+      tabpills[i].classList.remove("active");
+    }
 
-        const target = document.getElementById(namaTab);
-        target.hidden = false;
-        target.classList.add("active-block");
-        evt.currentTarget.classList.add("active");
-        evt.currentTarget.setAttribute("aria-selected", "true");
-      }
+    // Tampilkan kategori yang dipilih dan aktifkan tombolnya
+    document.getElementById(namaTab).style.display = "block";
+    document.getElementById(namaTab).classList.add("active-block");
+    evt.currentTarget.classList.add("active");
+  }
 
-      function bukaModal(judul, urlGambar, deskripsi) {
-        document.getElementById('modal-judul').innerText = judul;
-        document.getElementById('modal-img').src = urlGambar;
-        document.getElementById('modal-desc').innerText = deskripsi;
-        document.getElementById('modal-bukti').style.display = 'flex';
-      }
+  function bukaModal(judul, urlGambar, deskripsi) {
+    document.getElementById('modal-judul').innerText = judul;
+    document.getElementById('modal-img').src = urlGambar;
+    document.getElementById('modal-desc').innerText = deskripsi;
+    document.getElementById('modal-bukti').style.display = 'flex';
+  }
 
-      function tutupModalDirect() {
-        document.getElementById('modal-bukti').style.display = 'none';
-      }
+  function tutupModalDirect() {
+    document.getElementById('modal-bukti').style.display = 'none';
+  }
 
-      function tutupModal(event) {
-        if (event.target.id === 'modal-bukti') {
-          document.getElementById('modal-bukti').style.display = 'none';
-        }
-      }
-    </script>
-
+  function tutupModal(event) {
+    if (event.target.id === 'modal-bukti') {
+      document.getElementById('modal-bukti').style.display = 'none';
+    }
+  }
+</script>
     <!-- SECTION 5: FORMULIR LAYANAN & KONTAK -->
     <section id="formulir" aria-labelledby="judul-formulir">
       <div class="form-section-card">
@@ -496,7 +515,7 @@
                 <span class="icon-box">✉️</span>
                 <div>
                   <small>Email Resmi</small>
-                  <strong>margarethbungaran1@gmail.com</strong>
+                  <strong>margarethbungaran1@gmail</strong>
                 </div>
               </li>
               <li>
@@ -525,16 +544,16 @@
                 <legend>Data Pemesan</legend>
                 <div class="form-group">
                   <label for="nama">NAMA LENGKAP</label>
-                  <input class="form-control" type="text" id="nama" name="nama" autocomplete="name" minlength="3" placeholder="Masukkan nama Anda" required>
+                  <input type="text" id="nama" name="nama" autocomplete="name" minlength="3" placeholder="Masukkan nama Anda" required>
                 </div>
                 <div class="form-group">
                   <label for="email">EMAIL</label>
-                  <input class="form-control" type="email" id="email" name="email" autocomplete="email" aria-describedby="bantu-email" placeholder="nama@email.com" required>
+                  <input type="email" id="email" name="email" autocomplete="email" aria-describedby="bantu-email" placeholder="nama@email.com" required>
                   <small id="bantu-email">Contoh: nama@domain.com</small>
                 </div>
                 <div class="form-group">
                   <label for="telepon">NOMOR TELEPON / WHATSAPP</label>
-                  <input class="form-control" type="tel" id="telepon" name="telepon" autocomplete="tel" inputmode="tel" 
+                  <input type="tel" id="telepon" name="telepon" autocomplete="tel" inputmode="tel" 
                          pattern="[0-9+\-\s]{9,16}" title="Gunakan 9-16 karakter: angka, spasi, atau +" 
                          aria-describedby="bantu-telepon" placeholder="081234567890" required>
                   <small id="bantu-telepon">Contoh: 0812 3456 7890</small>
@@ -545,15 +564,15 @@
                 <legend>Jenis Layanan</legend>
                 <div class="radio-options">
                   <label class="radio-label">
-                    <input class="form-check-input" type="radio" id="layanan-db" name="layanan" value="basis-data" required>
+                    <input type="radio" id="layanan-db" name="layanan" value="basis-data" required>
                     <span>Konsultasi Perancangan Basis Data (ERD/PDM)</span>
                   </label>
                   <label class="radio-label">
-                    <input class="form-check-input" type="radio" id="layanan-web" name="layanan" value="web" required>
+                    <input type="radio" id="layanan-web" name="layanan" value="web" required>
                     <span>Konsultasi Pembuatan Web Accessible</span>
                   </label>
                   <label class="radio-label">
-                    <input class="form-check-input" type="radio" id="layanan-ilmiah" name="layanan" value="ilmiah" required>
+                    <input type="radio" id="layanan-ilmiah" name="layanan" value="ilmiah" required>
                     <span>Diskusi Penulisan Karya Ilmiah &amp; IoT</span>
                   </label>
                 </div>
@@ -563,7 +582,7 @@
                 <legend>Jadwal Pertemuan</legend>
                 <div class="form-group">
                   <label for="media">MEDIA PERTEMUAN</label>
-                  <select class="form-select" id="media" name="media" required>
+                  <select id="media" name="media" required>
                     <option value="">Pilih media pertemuan</option>
                     <option value="meet">Google Meet</option>
                     <option value="zoom">Zoom Meeting</option>
@@ -572,20 +591,20 @@
                 </div>
                 <div class="form-group">
                   <label for="durasi">DURASI KONSULTASI (JAM)</label>
-                  <input class="form-control" type="number" id="durasi" name="durasi" min="1" max="3" step="1" inputmode="numeric" placeholder="1-3 jam" required>
+                  <input type="number" id="durasi" name="durasi" min="1" max="3" step="1" inputmode="numeric" placeholder="1-3 jam" required>
                 </div>
                 <div class="form-group">
                   <label for="pesan">PESAN KEBUTUHAN</label>
-                  <textarea class="form-control" id="pesan" name="pesan" rows="4" minlength="20" maxlength="500" placeholder="Tuliskan detail kebutuhan konsultasi Anda..." required></textarea>
+                  <textarea id="pesan" name="pesan" rows="4" minlength="20" maxlength="500" placeholder="Tuliskan detail kebutuhan konsultasi Anda..." required></textarea>
                 </div>
                 <div class="checkbox-label">
-                  <input class="form-check-input" type="checkbox" id="setuju" name="setuju" value="ya" required>
+                  <input type="checkbox" id="setuju" name="setuju" value="ya" required>
                   <label for="setuju">Saya menyetujui data ini digunakan untuk merespons permintaan saya.</label>
                 </div>
               </fieldset>
 
               <div class="form-actions">
-                <button class="btn btn-pink btn-block" type="submit">Kirim Pesan ↗</button>
+                <button class="btn-pink btn-block" type="submit">Kirim Pesan ↗</button>
               </div>
             </form>
           </div>
@@ -609,7 +628,5 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle: komponen interaktif Bootstrap bila diperlukan -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
